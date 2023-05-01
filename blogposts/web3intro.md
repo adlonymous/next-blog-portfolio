@@ -5,13 +5,16 @@ date: '2023-05-01'
 
  Hola! It's me Adlonymous again, and today we're going to be talking about Web3. I know you already have a lot of questions. What is Web3? Why is it important? How do I get started? Let's find out!
 
-- **What is Web3?**
+**What is Web3?**
+
  Web3 or Web3.0 is a concept for a new iteration of the internet, centered along principles like decentralisation, blockchain technologies and token-based economics. It is a new paradigm for the internet, where users are in control of their data and identity, and are able to interact with each other in a trustless manner. 
 
-- **Why is Web3 important?**
+**Why is Web3 important?**
+
  In the traditional form of the internet (Web2), users are forced to trust third parties with their data and identity. This is a huge problem, as these third parties can easily misuse the data and identity of users. Web3 aims to solve this problem by giving users control over their data and identity, and by making the internet more decentralised. It is also said that Web3 will provide increased data security, scalability and privacy for users and combat the influence of large tech companies. 
 
-- **How to get started with Web3?**
+**How to get started with Web3?**
+
  To get started with Web3, you must first identify what kind of Web3 dev you want to become. There are two types of Web3 devs: Core devs and Software devs. Core devs are responsible for building the core infrastructure of Web3, such as blockchains, protocols and consensus mechanisms. Software devs are responsible for building applications on top of the core infrastructure.
 
  If you choose to go the core dev route, you must first learn about the fundamentals of blockchain technology, such as consensus mechanisms, cryptography, distributed systems and game theory. You must also learn about the different types of blockchains, such as public, private and consortium blockchains. After that you can continue upskilling yourself by learning about the different types of consensus mechanisms, such as Proof of Work, Proof of Stake and Delegated Proof of Stake. You can also learn about the different types of blockchains, such as Ethereum, Solana and Polkadot. Once you choose the chain you wish to contribute to, you can start learning about the core infrastructure of that chain, such as the consensus mechanism, the protocol and the smart contract language. Then, you can start contributing to the core infrastructure of that chain by building new features or fixing bugs..
@@ -24,5 +27,6 @@ date: '2023-05-01'
 
  After that, you can start building your application by writing the smart contracts, the frontend and the backend. You can also start contributing to existing projects by fixing bugs or adding new features.
 
-- **Conclusion**
+**Conclusion**
+
  Web3 is the future of the internet. I hope this article has helped you understand what Web3 is and how to get started with it. If you have any questions, feel free to shoot me a DM on Twitter. I'll be happy to help you out.
