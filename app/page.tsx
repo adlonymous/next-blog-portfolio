@@ -9,7 +9,7 @@ export default function Home() {
           I'm  <span className="pl-1.5 font-extrabold tracking-wider subpixel-antialiased italic underline decoration-sky-500 decoration-wavy underline-offset-2">adlonymous</span>.
         </span>
       </p>
-      <p className="mt-1 text-3xl text-center dark:text-white font-extralight p-4 mx-12 border-double border-y-4 border-x rounded-md border-sky-500 border-spacing-1"> 
+      <p className="mt-5 text-3xl text-center dark:text-white font-extralight p-4 mx-12 border-double border-y-4 border-x rounded-md border-sky-500 border-spacing-1"> 
                 I'm a CS Student in Chennai, India with experience as a
                 <span className="font-bold p-1.5">Full Stack Developer</span>
                 & an enthusiasm for 

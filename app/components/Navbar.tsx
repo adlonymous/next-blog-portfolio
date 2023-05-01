@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="prose prose-xl mx-auto flex justify-between flex-col sm:flex-row">
             <h1 className="text-3xl font-extrabold text-white grid place-content-center mb-2 md:mb-0
                  tracking-wider subpixel-antialiased italic ">
-                <Link href='/' className="hover:text-white/90 no-underline text-sky-500">adlonymous</Link>
+                <Link href='/' className="hover:text-white/90 no-underline text-sky-500 font-mono">adlonymous</Link>
             </h1>
             <div className="flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-2xl lg:text-4xl">
                 <Link className="text-white/90 hover:text-sky-500" href="https://bento.me/adlonymous">
