@@ -12,7 +12,7 @@ export default function Home() {
       <p className="mt-5 text-3xl text-center dark:text-white font-extralight p-4 mx-12 border-double border-y-4 border-x rounded-md border-sky-500 border-spacing-1"> 
                 I'm a CS Student in Chennai, India with experience as a
                 <span className="font-bold p-1.5">Full Stack Developer</span>
-                & an enthusiasm for 
+                & an affinity towards
                 <span className="font-bold p-1.5">Web3 & AI</span>
                 Technologies . I'm also a 
                 <span className="font-bold p-1.5">Solana University Ambassador</span> 
