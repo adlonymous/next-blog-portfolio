@@ -19,7 +19,7 @@ export default function Home() {
                 Technologies . I&apos;m a
                 <span className="font-bold p-1.5">Co-Founder at Stockpile</span> 
                 and a 
-                <span className="font-bold p-1.5">Core Team at Solana University</span>. 
+                <span className="font-bold p-1.5">Core Team Member at Solana University</span>. 
                 Head over to my 
                 <span className="font-bold pl-2 pr-1">Twitter</span> to say Hi, take a look at my 
                 <span className="font-bold p-1.5">Github & LinkedIn</span>
