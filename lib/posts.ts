@@ -34,6 +34,9 @@ export async function getPostByName(
     tags: string[];
   }>({
     source: rawMDX,
+    options: {
+      parseFrontmatter: true,
+    },
   });
 
   const id = fileName.replace(/\.mdx$/, "");

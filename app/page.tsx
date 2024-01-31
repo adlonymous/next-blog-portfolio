@@ -34,7 +34,7 @@ export default function Home() {
         <span className="font-semibold pl-2 pr-1">Personal Website</span>
         or check out my blog down below!
       </p>
-      {/* {@ts-expect-error Server Component} */}
+      {/* @ts-expect-error Server Component */}
       <Posts />
     </div>
   );

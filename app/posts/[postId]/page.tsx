@@ -1,58 +1,67 @@
-import getFormattedDate from "@/lib/getFormattedDate"
-import { getSortedPostsData, getPostData } from "@/lib/posts"
-import { notFound } from "next/navigation"
-import Link from "next/link"
+import getFormattedDate from "@/lib/getFormattedDate";
+import { getPostsMeta, getPostByName } from "@/lib/posts";
+import { notFound } from "next/navigation";
+import Link from "next/link";
 
-export function generateStaticParams() {
-    const posts = getSortedPostsData()
-    
-    return posts.map((post) => ({
-        postId: post.id
-    }))
-}
+export const revalidate = 0;
 
-export async function generateMetadata({ params }: { params: { postId: string }}) {
+type Props = {
+  params: {
+    postId: string;
+  };
+};
 
-    const posts = getSortedPostsData()
-    const { postId } = params
+// export async function generateStaticParams() {
+//   const posts = await getPostsMeta();
 
-    const post =  posts.find(post => post.id === postId)
+//   if (!posts) return [];
 
-    if(!post){
-        return {
-            title: 'Post not found'
-        }
-    }
-   
+//   return posts.map((post) => ({
+//     postId: post.id,
+//   }));
+// }
+
+export async function generateMetadata({ params: { postId } }: Props) {
+  const post = await getPostByName(`${postId}.mdx`);
+
+  if (!post) {
     return {
-        title: post.title, 
-    }
+      title: "Post not found",
+    };
+  }
 
+  return {
+    title: post.meta.title,
+  };
 }
 
-export default async function Post({ params }: { params: { postId: string }}) {
+export default async function Post({ params: { postId } }: Props) {
+  const post = await getPostByName(`${postId}.mdx`);
 
-    const posts = getSortedPostsData()
-    const { postId } = params
+  if (!post) notFound();
 
-    if (!posts.find(post => post.id === postId)) {
-        return notFound()
-    }
+  const { meta, content } = post;
 
-    const { title,date, contentHtml } = await getPostData(postId)
+  const pubDate = getFormattedDate(meta.date);
 
-    const pubDate = getFormattedDate(date)
+  const tags = meta.tags.map((tag, i) => (
+    <Link key={i} href={`/tags/${tag}`}>
+      {tag}
+    </Link>
+  ));
 
   return (
-    <main className="px-6 py-10 prose prose-xl prose-slate dark:prose-invert mx-auto font-extralight">
-        <h1 className="text-3xl mt-4 mb-0 underline decoration-wavy decoration-sky-500 ">{title}</h1>
-        <p className="mt-1 font-light">{pubDate}</p>
-        <article>
-            <section dangerouslySetInnerHTML={{__html: contentHtml}} />
-            <p>
-                <Link href="/" className="no-underline ">⬅ Back to Home</Link>
-            </p>
-        </article>
-    </main>
-  )
+    <>
+      <h2 className="text-3xl mt-4 mb-0">{meta.title}</h2>
+      <p className="mt-0 text-sm">{pubDate}</p>
+      <article>{content}</article>
+      <section>
+        <h3>Related:</h3>
+        <div className="flex flex-row gap-4">{tags}</div>
+      </section>
+      <p className="mb-10">
+        <Link href="/">Back to home</Link>
+      </p>
+    </>
+  );
 }
